@@ -123,6 +123,14 @@ namespace CajeroAutomatico
             saldo += montoDepositar;
             Console.WriteLine($"Se ha depositado {montoDepositar}");
         }
+        private void CambiarClave()
+        {
+            Console.Write("Ingrese la nueva clave: ");
+            string nuevaClave = Console.ReadLine();
+
+            clave = nuevaClave;
+            Console.WriteLine("Clave cambiada con éxito");
+        }
 
     }
 }
