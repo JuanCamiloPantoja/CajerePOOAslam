@@ -115,6 +115,14 @@ namespace CajeroAutomatico
                 Console.WriteLine("No hay suficiente saldo para realizar el retiro");
             }
         }
+        private void DepositarDinero()
+        {
+            Console.Write("Ingrese el monto a depositar: ");
+            decimal montoDepositar = Convert.ToDecimal(Console.ReadLine());
+
+            saldo += montoDepositar;
+            Console.WriteLine($"Se ha depositado {montoDepositar}");
+        }
 
     }
 }
