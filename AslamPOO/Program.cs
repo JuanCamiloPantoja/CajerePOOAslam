@@ -38,5 +38,46 @@ namespace CajeroAutomatico
                 Console.WriteLine("Cuenta o clave incorrecta, no se puede iniciar sesión");
             }
         }
+        private void Menu()
+        {
+            while (true)
+            {
+                Console.WriteLine("Menú:");
+                Console.WriteLine("1. Mostrar saldo");
+                Console.WriteLine("2. Transferir dinero");
+                Console.WriteLine("3. Retirar dinero");
+                Console.WriteLine("4. Depositar dinero");
+                Console.WriteLine("5. Cambiar clave");
+                Console.WriteLine("6. Salir");
+
+                Console.Write("Ingrese su opción: ");
+                int opcion = Convert.ToInt32(Console.ReadLine());
+
+                switch (opcion)
+                {
+                    case 1:
+                        MostrarSaldo();
+                        break;
+                    case 2:
+                        TransferirDinero();
+                        break;
+                    case 3:
+                        RetirarDinero();
+                        break;
+                    case 4:
+                        DepositarDinero();
+                        break;
+                    case 5:
+                        CambiarClave();
+                        break;
+                    case 6:
+                        Console.WriteLine("Gracias por utilizar el cajero automático");
+                        return;
+                    default:
+                        Console.WriteLine("Opción inválida, por favor ingrese una opción válida");
+                        break;
+                }
+            }
+        }
     }
 }
