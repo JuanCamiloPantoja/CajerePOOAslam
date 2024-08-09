@@ -26,5 +26,17 @@ namespace CajeroAutomatico
             this.clave = clave;
             this.saldo = saldo;
         }
+        public void IniciarSesion(string numeroCuentaIngresada, string claveIngresada)
+        {
+            if (numeroCuentaIngresada == numeroCuenta && claveIngresada == clave)
+            {
+                Console.WriteLine("Bienvenido, usted ha iniciado sesión correctamente");
+                Menu();
+            }
+            else
+            {
+                Console.WriteLine("Cuenta o clave incorrecta, no se puede iniciar sesión");
+            }
+        }
     }
 }
