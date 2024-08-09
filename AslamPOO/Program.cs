@@ -83,6 +83,23 @@ namespace CajeroAutomatico
         {
             Console.WriteLine($"Su saldo es: {saldo}");
         }
+        private void TransferirDinero()
+        {
+            Console.Write("Ingrese el monto a transferir: ");
+            decimal montoTransferir = Convert.ToDecimal(Console.ReadLine());
+            Console.Write("Ingrese la cuenta de destino: ");
+            string cuentaDestino = Console.ReadLine();
+
+            if (saldo >= montoTransferir)
+            {
+                saldo -= montoTransferir;
+                Console.WriteLine($"Se ha transferido {montoTransferir} a la cuenta {cuentaDestino}");
+            }
+            else
+            {
+                Console.WriteLine("No hay suficiente saldo para realizar la transferencia");
+            }
+        }
 
     }
 }
